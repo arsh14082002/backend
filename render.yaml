@@ -1,0 +1,26 @@
+# Exported from Render on 2024-05-08T17:04:08Z
+services:
+  - type: web
+    name: backend
+    runtime: node
+    repo: https://github.com/arsh14082002/backend
+    plan: free
+    envVars:
+      - key: PORT
+        sync: false
+      - key: API_SECERET
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: CLOUD_NAME
+        sync: false
+      - key: NODE_ENV
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECERET
+        sync: false
+    region: oregon
+    buildCommand: npm install
+    startCommand: node server.ts
+version: '1'
