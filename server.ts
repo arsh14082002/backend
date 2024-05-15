@@ -1,8 +1,11 @@
 import app from './src/app';
 import { config } from './src/config/config';
 import connectDB from './src/config/db';
+import dotenv from 'dotenv';
 
-const PORT = config.port1 || config.port2 || config.port3 || 18012 || 18013 || 19099;
+dotenv.config();
+
+const PORT = process.env.PORT1 || process.env.PORT2 || process.env.PORT3;
 // const PORT = 8081;
 
 connectDB();
