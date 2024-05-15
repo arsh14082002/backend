@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "npm start && tsc",
-    "dev": "nodemon --exec 'ts-node --cache-directory .tscache' ./server.ts",
-    "start": "ts-node --fast ./server.ts"
+    "dev": "nodemon server.ts",
+    "start": "node server.ts"
   },
   "keywords": [],
   "author": "",
